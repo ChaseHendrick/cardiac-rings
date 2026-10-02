@@ -1,0 +1,14 @@
+{
+  "title": "Stable Rotating Waves in Rings of a Modified Ventricular Cell Model: Computer-Assisted Proofs",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>We give computer-assisted proofs for Erhardt's 18-state modification of the ten Tusscher-Panfilov 2006 endocardial ventricular cell model at slow delayed rectifier conductance G_Ks = 0.0275 nS/pF, 1.46 per cent below the first supercritical Hopf point he computed numerically. Rings of N identical cells, coupled diffusively through the voltage with strength N^2/64000 per ms, discretize the cable u_t = f(u) + D u_xx, D = 1/64000 per ms, on a ring of length 1. Rotating waves there are expected from equivariant Hopf theory; we prove them at explicit parameters.</p><p>For one cell, two proofs (CAPD and Arb, sharing only GMP and MPFR) give an orbitally asymptotically stable periodic orbit, with 17 nontrivial Floquet multipliers below 0.998642 and 0.997859 respectively, and an exact rational check shows both enclose the same orbit. For N = 8, 16, 32, 64 a rotating 1-wave exists, is locally unique and not synchronous, has minimal period T = 2 pi/omega enclosed to within 2e-25 ms, and is locally exponentially orbitally stable: the multiplier 1 is algebraically simple and the other 18N - 1 have modulus below e^(-delta T) &lt; 0.9997321, delta = 5e-6 per ms. A locally unique rotating 1-wave also exists for every N &gt;= 8, and a traveling wave for the cable, the limit of the ring waves.</p><p>Existence is a radii-polynomial argument in a weighted l^1 space, made uniform over epsilon in [0, 1/64] (1/N^2 for the rings, 0 for the cable) in 73 pieces glued by ball inclusion. Stability rests on one Hill operator whose spectrum gives every Floquet multiplier with its algebraic multiplicity; a Riesz-projection homotopy shows it meets {Re mu &gt;= -delta} only in the eigenvalues i omega N Z, each algebraically simple. Stability is proved only for the cell and these four rings; the link to the Hopf branch is only numerical, and nothing is claimed for tissue.</p><p>This record holds the manuscript, a preprint that has not been peer reviewed, with the programs that check its results and their output. README.md describes each program and how to run it.</p><p>The manuscript in paper/, including its figures, is all rights reserved. The programs in code/ and the data in data/ are licensed under the Apache License 2.0; that license does not apply to the manuscript or its figures. Specific component notices and directory licenses govern any exceptions; see LICENSE and NOTICE.</p>",
+  "creators": [
+    {
+      "name": "Hendrick, Chase",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0002-9754-6087"
+    }
+  ],
+  "license": "other-closed"
+}
