@@ -7,6 +7,10 @@ in [`review/`](review/README.md); none is an outside review.
 
 **Version 1.1.0** is published and archived. The actual GitHub and Zenodo source ZIPs each contain the exact reviewed 73-page PDF and all 186 expected files, including all 84 code/data files. The complete original stability and Hopf suites, branch quick checks and fresh tracked-companion reproduction passed their recorded in-project checks.
 
+The working revision after 1.1.0 corrects the distinction between membrane-current and internal calcium fluxes
+and clarifies the clamped-potassium model. Its source and rebuilt PDF retain the same theorem claims. The version
+DOI above identifies the published 1.1.0 archive.
+
 Release 1.0.0 remains available at [doi:10.5281/zenodo.23101322](https://doi.org/10.5281/zenodo.23101322); earlier immutable archives and their evidence remain unchanged.
 
 **Working revision after 1.1.0 (2026-10-03).** The manuscript and PDF on this branch correct the description of
@@ -139,10 +143,10 @@ A. H. Erhardt's 18-state K_i-clamped, smoothed TP06 endocardial model (`fun_eval
 andreerhardt/cardiac-dynamics-of-a-human-ventricular-tissue-model-with-focus-on-early-afterdepolarizations, commit
 dc78f86, MIT License), which differs from the published TP06 cell in four ways: K_i is held at 138.3 mM; the Heaviside
 switch at V = -40 mV in the h and j rates is replaced by 1/(1 + exp(-5(V + 40))); G_Kr = 0.0153 and G_CaL = 0.000199
-(0.1 and 5 times the endocardial values), with G_Ks = 0.0275; and C_m = 1 multiplies the membrane-current
-contributions to the Ca_i, Ca_ss and Na_i balances, with coefficients about 5.405 times those in the convention of
-the CellML-derived version of TP06 in the same repository, which uses 0.185 for the cell capacitance. Internal calcium
-uptake, leak, release and transfer terms do not carry this factor. Holding K_i fixed modifies the differential
+(0.1 and 5 times the endocardial values), with G_Ks = 0.0275; and C_m = 1 also multiplies the Ca_i, Ca_ss and Na_i
+membrane-current terms, whose coefficients are 1/0.185, approximately 5.405, times those in the convention of
+the CellML-derived version of TP06 in the same repository, which uses 0.185 for the cell capacitance.
+Internal calcium uptake, leak, release and transfer terms do not carry this capacitance factor. Holding K_i fixed modifies the differential
 equations; the generally nonzero omitted potassium balance prevents identifying it with a conserved-charge leaf
 of the full 19-state model. These results concern the specified 18-state model. The ring is
 dx_j/dt = f(x_j) + c E (x_{j-1} - 2 x_j + x_{j+1}), c = N^2/64000 per ms, E the projection on V.
