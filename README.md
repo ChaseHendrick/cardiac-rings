@@ -9,6 +9,12 @@ in [`review/`](review/README.md); none is an outside review.
 
 Release 1.0.0 remains available at [doi:10.5281/zenodo.23101322](https://doi.org/10.5281/zenodo.23101322); earlier immutable archives and their evidence remain unchanged.
 
+**Working revision after 1.1.0 (2026-10-03).** The manuscript and PDF on this branch correct the description of
+capacitance-dependent concentration terms and clarify that potassium clamping modifies the equations. The
+corrected PDF was rebuilt and inspected across all 73 pages. The mathematical model, programs, data, theorem
+statements and accepted bounds are unchanged. This working PDF differs from the archived 1.1.0 PDF; the DOI above
+continues to identify that immutable release. This revision adds no extension theorem and creates no new release.
+
 **[Read the paper PDF](paper/cardiac-rings.pdf)**, built from [`paper/cardiac-rings.tex`](paper/cardiac-rings.tex).
 
 ## Conductance extension and limits
@@ -133,9 +139,12 @@ A. H. Erhardt's 18-state K_i-clamped, smoothed TP06 endocardial model (`fun_eval
 andreerhardt/cardiac-dynamics-of-a-human-ventricular-tissue-model-with-focus-on-early-afterdepolarizations, commit
 dc78f86, MIT License), which differs from the published TP06 cell in four ways: K_i is held at 138.3 mM; the Heaviside
 switch at V = -40 mV in the h and j rates is replaced by 1/(1 + exp(-5(V + 40))); G_Kr = 0.0153 and G_CaL = 0.000199
-(0.1 and 5 times the endocardial values), with G_Ks = 0.0275; and C_m = 1 also multiplies the Ca_i, Ca_ss and Na_i
-fluxes, so every concentration flux is 5.405 times its value in the convention of the CellML-derived version of
-TP06 in the same repository, which uses 0.185 for the cell capacitance. The ring is
+(0.1 and 5 times the endocardial values), with G_Ks = 0.0275; and C_m = 1 multiplies the membrane-current
+contributions to the Ca_i, Ca_ss and Na_i balances, with coefficients about 5.405 times those in the convention of
+the CellML-derived version of TP06 in the same repository, which uses 0.185 for the cell capacitance. Internal calcium
+uptake, leak, release and transfer terms do not carry this factor. Holding K_i fixed modifies the differential
+equations; the generally nonzero omitted potassium balance prevents identifying it with a conserved-charge leaf
+of the full 19-state model. These results concern the specified 18-state model. The ring is
 dx_j/dt = f(x_j) + c E (x_{j-1} - 2 x_j + x_{j+1}), c = N^2/64000 per ms, E the projection on V.
 
 ## Programs
