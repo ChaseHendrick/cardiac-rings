@@ -9,8 +9,8 @@ authors:
     orcid: "https://orcid.org/0009-0002-9754-6087"
 license: Apache-2.0
 repository-code: "https://github.com/ChaseHendrick/cardiac-rings"
-version: "1.0.0"
-doi: "10.5281/zenodo.23101322"
+version: "1.1.0"
+doi: "10.5281/zenodo.23114240"
 preferred-citation:
   type: article
   title: "Stable Rotating Waves in Rings of a Modified Ventricular Cell Model: Computer-Assisted Proofs"
@@ -21,4 +21,4 @@ preferred-citation:
       orcid: "https://orcid.org/0009-0002-9754-6087"
   year: 2026
   url: "https://github.com/ChaseHendrick/cardiac-rings"
-  doi: "10.5281/zenodo.23101322"
+  doi: "10.5281/zenodo.23114240"
